@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RicciFilmStudios – Talent Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2em;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    /* Justify paragraphs inside .intro */
+    .intro p {
+      text-align: justify;
+    }
+    .intro .images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .intro .images img {
+      width: calc(20% - 12px); /* 5 images in a row */
+      min-width: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .intro .images img:hover {
+      transform: scale(1.05);
+    }
+    @media (max-width: 600px) {
+      .intro .images img {
+        width: 45%;
+      }
+    }
+    form {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    form label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: bold;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    form button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #444;
+    }
+    /* Justify the agreement paragraph below the form */
+    .application-form p {
+      text-align: justify;
+      margin-top: 15px;
+      font-size: 0.9em;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #fff;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RicciFilmStudios</h1>
+    <p>Established 2020 | Los Angeles, CA</p>
+  </header>
+
+  <div class="container">
+    <section class="intro">
+      <h2>Join Our Global Talent Search</h2>
+      <p>
+        At RicciFilmStudios, we’re on the lookout for fresh, dynamic talent from around the world.
+        Whether you’re a model, an actor, or both — if you’re passionate, driven, and ready to shine on camera — we want to hear from you.
+      </p>
+      <p>
+        We believe in discovering new faces everywhere, offering opportunities across modelling and acting for projects based in Los Angeles and internationally.
+        No matter your origin or background, if you have the talent and drive, this could be your moment.
+      </p>
+
+      <div class="images">
+        <img src="2.jpg" alt="Talent photo 2" />
+        <img src="3.jpg" alt="Talent photo 3" />
+        <img src="4.jpg" alt="Talent photo 4" />
+        <img src="5.jpg" alt="Talent photo 5" />
+      </div>
+    </section>
+
+    <section class="application-form">
+      <h2>Apply Now</h2>
+      <form action="mailto:marcoriccifilms@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="Name" required />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="Age" required min="0" />
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="Country" required />
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="Phone" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email" required />
+
+        <label for="role">I am applying for:</label>
+        <select id="role" name="Role" required>
+          <option value="">--Please choose--</option>
+          <option value="Modeling">Modeling</option>
+          <option value="Acting">Acting</option>
+          <option value="Both">Both Modeling & Acting</option>
+        </select>
+
+        <button type="submit">Submit Application</button>
+      </form>
+      <p>By submitting this form you agree to RicciFilmStudios contacting you regarding opportunities and talent submissions.</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>RicciFilmStudios · Los Angeles, CA · © 2020–2025</p>
+  </footer>
+</body>
+</html>
